@@ -58,9 +58,9 @@
 #!/bin/sh
 
 # Подготавливаем SA
-yc iam service-account delete sa-robot
-yc iam service-account create --name sa-robot
-ID_SA=`yc iam service-account list | grep 'sa-robot' | awk '{print $2}'`
+yc iam service-account delete servis
+yc iam service-account create --name servis
+ID_SA=`yc iam service-account list | grep 'servis' | awk '{print $2}'`
 yc resource-manager folder add-access-binding --id b1gnc2bkas267cooida6 --role editor --service-account-id $ID_SA
 yc resource-manager folder add-access-binding --id b1gnc2bkas267cooida6 --role storage.admin --service-account-id $ID_SA
 yc iam access-key create --service-account-id $ID_SA --format json > ~/.ssh/sa-key.json
@@ -83,7 +83,7 @@ export TF_VAR_secret_key=$SECRET_ACCESS_KEY
 resource "yandex_storage_bucket" "my_bucket" {
   access_key = var.access_key
   secret_key = var.secret_key
-  bucket                = "aleksey-naumov"
+  bucket                = "vsavilov"
   default_storage_class = "STANDARD"
   acl    = "private"
 }
@@ -98,7 +98,7 @@ terraform {
       s3 = "https://storage.yandexcloud.net"
     }
     
-    bucket = "aleksey-naumov"
+    bucket = "vsavilov"
     region = "ru-central1"
     key    = "terraform.tfstate"
    
