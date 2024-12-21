@@ -1,0 +1,44 @@
+name: Docker Image CI
+on:
+  push:
+    tags:
+      - 'v*'
+
+env:
+  MY_REGISTRY_ID: ${{ secrets.MY_REGISTRY_ID }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build and push Docker image with tag
+      uses: docker/build-push-action@v6
+      with:
+        context: .
+        push: true
+        tags: |
+          cr.yandex/${{ env.MY_REGISTRY_ID }}/nginx:${{ github.ref_name }}
+          cr.yandex/${{ env.MY_REGISTRY_ID }}/nginx:latest
+    
+    - name: Update Deployment YAML
+      run: |
+        sed -i "s/repository-id/${{ env.MY_REGISTRY_ID }}/g" ./k8s/app-deployment.yml
+        sed -i "s/\:latest/\:${{ github.ref_name }}/g" ./k8s/app-deployment.yml
+
+    - name: Setup Kubernetes
+      uses: azure/setup-kubectl@v4
+      with:
+        version: 'latest' 
+
+    - name: Configure kubectl
+      run: |
+        echo "${{ secrets.KUBE_CONFIG }}" | base64 --decode > config
+        chmod 600 config
+
+
+    - name: Deploy to Kubernetes
+      run: |
+        kubectl --kubeconfig=config --insecure-skip-tls-verify apply -f ./k8s/app-deployment.yml
+        kubectl --kubeconfig=config --insecure-skip-tls-verify apply -f ./k8s/app-service.yml
+        kubectl --kubeconfig=config --insecure-skip-tls-verify apply -f ./k8s/app-networkpolicy.yml
