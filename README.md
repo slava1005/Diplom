@@ -207,12 +207,9 @@ Destroy complete! Resources: 4 destroyed.
 ```
 
 Подтвердим скриншотами созданные ресурсы:
+![img1_1](https://github.com/user-attachments/assets/1040be1e-8b66-4d25-a906-2f1c716cd9a6)
 
-![image](https://github.com/user-attachments/assets/d354fc16-fb01-43af-81a0-e7d15f1a6915)
-
-![image](https://github.com/user-attachments/assets/eabe13fe-9998-4dea-b837-72f89b5a56a2)
-
-
+![img1_2](https://github.com/user-attachments/assets/a6edb92f-537f-42e3-902c-17ddbb59afc3)
 
 ---
 ### Создание Kubernetes кластера
@@ -565,12 +562,11 @@ resource "null_resource" "install-k8s" {
     
 16. Проверим созданные инстансы:
 
-![image](https://github.com/user-attachments/assets/2899b04f-286a-4e90-a592-0da32f0320fe)
+![img1_3](https://github.com/user-attachments/assets/9bc39917-a0a6-4b6e-a0a4-ac9d3c1afdd9)
 
 17. Посмотрим схему сети:
 
-![image](https://github.com/user-attachments/assets/fd271ec9-2373-4cfe-83e8-035b55cda832)
-
+![img1_4](https://github.com/user-attachments/assets/9a12db5b-533f-4fcd-a82c-08952a11a17e)
 
 13. Посмотрим как сформирован inventory:
 
@@ -656,7 +652,7 @@ all:
 
 1. Создадим отдельный git репозиторий:
 
-![image](https://github.com/user-attachments/assets/92d15af0-5bbd-4c12-afb4-87f0ffa5aee5)
+![img1_5](https://github.com/user-attachments/assets/1f09bb94-0a61-4136-8aca-c7c3812d6bbf)
 
 2. Создадим статическую страницу для конфигурации nginx:
 
