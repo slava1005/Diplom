@@ -620,8 +620,7 @@ all:
 
 14. Подключимся к мастер-ноде и проверим состояние нод от пользователя ubuntu:
 
-![image](https://github.com/user-attachments/assets/2c97ee6c-be11-4ff3-bf39-4d3e224accb2)
-
+![img1_11](https://github.com/user-attachments/assets/c8c75435-75c6-4201-a0e6-f2d7951a2b91)
 
 15. Проверим состояние подов в кластере:
 
