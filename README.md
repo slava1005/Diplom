@@ -1044,18 +1044,17 @@ output "App_address" {
 
 8. Для разворачивания всех ресурсов, кластера k8s и мониторинга применим команду ```terraform apply```
 
-9. В результате:
+ В результате:
 
-![image](https://github.com/user-attachments/assets/9467dade-bd3e-4d0d-b54c-54d6521ea090)
+![img1_7](https://github.com/user-attachments/assets/5e6f6f47-97b8-44b8-8aff-ae6c02f26bc9)
 
 9. Перейдем по указанному адресу, введем стандартный пароль admin/admin и откроем дашборд ```Kubernetes / Compute Resources / Node (Pods)```:
 
-![image](https://github.com/user-attachments/assets/e1b52c9a-f358-411a-9787-d8a64688616b)
+![img1_8](https://github.com/user-attachments/assets/847c2eef-854e-416f-aba2-8237d3c377fa)
 
 10. Посмотрим на созданные ресурсы ЯО:
 
-![image](https://github.com/user-attachments/assets/263b1391-65ce-4a9b-9a96-3190e26a74e7)
-
+![img1_9](https://github.com/user-attachments/assets/d0d2dfb5-1b9a-4232-b38d-eeb5cce6621e)
 
 ---
 ### Установка и настройка CI/CD
