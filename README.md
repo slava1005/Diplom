@@ -738,9 +738,7 @@ resource "local_file" "registry_id_file" {
 5. Применяем конфигурацию terraform командой ```terraform apply```
 6. Проверяем результат в консоли управления yandex:
 
-![image](https://github.com/user-attachments/assets/f5e54a88-e1a0-4038-9a9a-b0d15aceedf5)
-
-
+![img1_6](https://github.com/user-attachments/assets/d16c7b4e-3b99-4a8a-a854-ae471abf967c)
 
 ---
 ### Подготовка cистемы мониторинга и деплой приложения
