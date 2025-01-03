@@ -53,6 +53,8 @@ jobs:
       run: terraform validate
      
     - name: Terraform Plan
+      env:
+          YANDEX_CLOUD_TOKEN: ${{ secrets.YANDEX_CLOUD_TOKEN }}  # Используйте токен
       working-directory: terraform
       run: terraform plan
       
