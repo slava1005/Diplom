@@ -32,6 +32,10 @@ jobs:
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v3
 
+    - name: Display sa-iam.json
+      run: |
+        cat ~/.ssh/sa-iam.json
+
     - name: Create service account key file
       run: |
         mkdir -p ~/.ssh
