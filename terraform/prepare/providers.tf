@@ -9,7 +9,7 @@ terraform {
 
 provider "yandex" {
 #  service_account_key_file     = file("~/.ssh/sa-iam.json")
-  token     = TOKEN
+  token     = var.yandex_cloud_token  # Для токена
   cloud_id  = var.cloud_id
   folder_id = var.folder_id
   zone      = var.default_zone
