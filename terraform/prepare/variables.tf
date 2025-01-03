@@ -1,4 +1,7 @@
 ############ Cloud vars ###############
+
+variable "yandex_cloud_token" {}
+
 variable "token" {
   type        = string
   description = "OAuth-token; https://cloud.yandex.ru/docs/iam/concepts/authorization/oauth-token"
