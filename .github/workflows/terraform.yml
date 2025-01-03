@@ -39,7 +39,7 @@ jobs:
     - name: Create service account key file
       run: |
         mkdir -p ~/.ssh
-        echo "${{ secrets.SA_IAM_KEY }}" | base64 --decode > ~/.ssh/sa-iam.json
+        echo "${{ secrets.SA_IAM_KEY }}" | base64 --decode > /home/runner/.ssh/sa-iam.json
 
     - name: Set up SSH
       run: |
