@@ -41,6 +41,10 @@ jobs:
       run: |
         cat ~/.ssh/sa-iam.json
 
+    - name: Display SA_IAM_JSON secret
+      run: |
+         echo "${{ secrets.SA_IAM_JSON }}"
+
     - name: Set up SSH
       run: |
         mkdir -p ~/.ssh
