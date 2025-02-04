@@ -49,11 +49,11 @@ jobs:
 
     - name: Debug environment
       run: |
-      echo "HOME: $HOME"
-      echo "PWD: $PWD"
-      ls -l ~/.ssh/sa-iam.json
-      echo "TF_VAR_cloud_id: ${{ secrets.TF_VAR_cloud_id }}"
-      echo "TF_VAR_folder_id: ${{ secrets.TF_VAR_folder_id }}"
+        echo "HOME: $HOME"
+        echo "PWD: $PWD"
+        ls -l ~/.ssh/sa-iam.json
+        echo "TF_VAR_cloud_id: ${{ secrets.TF_VAR_cloud_id }}"
+        echo "TF_VAR_folder_id: ${{ secrets.TF_VAR_folder_id }}"
       
     - name: Terraform Validate
       working-directory: terraform
