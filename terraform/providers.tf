@@ -9,7 +9,7 @@ terraform {
 
 provider "yandex" {
 # service_account_key_file = file("~/.ssh/sa-iam.json")
-service_account_key_file = "/home/slava/.ssh/sa-iam.json"
+service_account_key_file = "home/slava/.ssh/sa-iam.json"
   cloud_id                 = var.cloud_id
   folder_id                = var.folder_id
   zone                     = var.default_zone
