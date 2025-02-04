@@ -43,11 +43,6 @@ jobs:
         chmod 600 ~/.ssh/id_rsa.pub
         set -x
         
-    - name: Copy .ssh directory (NOT RECOMMENDED)
-      run: |
-        mkdir -p /home/runner
-        cp -r ~/.ssh /home/runner/
-        
     - name: Terraform Init
       working-directory: terraform
       run: terraform init
